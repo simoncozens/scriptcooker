@@ -13,7 +13,7 @@ ScriptCooker = {
     return ScriptCooker.generate();
   },
   'generate': function() {
-    var c, cpid, name, possible, row, s, script, td, v, _i, _len, _ref;
+    var c, counter, cpid, font, name, possible, row, s, script, td, v, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2;
     possible = (function() {
       var _ref, _results;
       _ref = ScriptCooker.scripts;
@@ -29,9 +29,20 @@ ScriptCooker = {
     name = possible[Math.floor(Math.random() * possible.length)];
     script = ScriptCooker.scripts[name];
     $("#script").html(name);
+    $("#cpcount").html(script.count);
     if (script.noto_css) {
       $("#fonts").html("@import url(http://fonts.googleapis.com/" + script.noto_css + ");");
-      $("#fonts").append("#udhr { font-family: \"" + script.noto_family + "\"");
+      $("#fonts").append("#udhr, #codepoints { font-family: \"" + script.noto_family + "\" }");
+    }
+    if (script.other_fonts) {
+      counter = 1;
+      _ref = script.other_fonts;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        font = _ref[_i];
+        $("#fonts").append(font.css);
+        $("#fonts").append(".other-" + counter + " { font-family: \"" + font.name + "\" }");
+        counter = counter + 1;
+      }
     }
     if (script.udhr) {
       $("#udhr").html(script.udhr);
@@ -43,12 +54,12 @@ ScriptCooker = {
     $("#more-info-wrapper").addClass("hidden");
     if (script.scriptsource) {
       $("#more-info-wrapper").removeClass("hidden");
-      $("#more-info").append("<li> <a href=\"" + script.scriptsource + "\">" + name + " on Scriptsource</a></li>");
+      $("#more-info").append("<li> <a href=\"http://scriptsource.org/scr/" + script.scriptsource + "\">" + name + " on Scriptsource</a></li>");
     }
     $("#codepoints").empty();
-    _ref = script.codepoints;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      c = _ref[_i];
+    _ref1 = script.codepoints;
+    for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+      c = _ref1[_j];
       console.log(c);
       row = $("<tr>");
       cpid = c.toString(16);
@@ -57,8 +68,18 @@ ScriptCooker = {
       }
       td = $("<td>").html("U+" + cpid);
       row.append(td);
-      td = $("<td>").html(String.fromCharCode(c));
+      td = $("<td class=\"glyph\">").html(String.fromCharCode(c));
       row.append(td);
+      if (script.other_fonts) {
+        counter = 1;
+        _ref2 = script.other_fonts;
+        for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
+          font = _ref2[_k];
+          td = $("<td class=\"glyph other-" + counter + "\">").html(String.fromCharCode(c));
+          row.append(td);
+          counter = counter + 1;
+        }
+      }
       $("#codepoints").append(row);
     }
     return console.log(name);

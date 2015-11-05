@@ -12,9 +12,16 @@ ScriptCooker =
     name = possible[Math.floor(Math.random()*possible.length)]
     script = ScriptCooker.scripts[name]
     $("#script").html(name)
+    $("#cpcount").html(script.count)
     if script.noto_css
       $("#fonts").html("@import url(http://fonts.googleapis.com/" + script.noto_css + ");")
-      $("#fonts").append("#udhr { font-family: \""+script.noto_family+"\"")
+      $("#fonts").append("#udhr, #codepoints { font-family: \""+script.noto_family+"\" }")
+    if script.other_fonts
+      counter = 1
+      for font in script.other_fonts
+        $("#fonts").append(font.css)
+        $("#fonts").append(".other-"+counter+" { font-family: \""+font.name+"\" }")
+        counter = counter+1
     if script.udhr
       $("#udhr").html(script.udhr)
       $("#udhr-wrapper").removeClass("hidden")
@@ -24,7 +31,7 @@ ScriptCooker =
     $("#more-info-wrapper").addClass("hidden")
     if script.scriptsource
       $("#more-info-wrapper").removeClass("hidden")
-      $("#more-info").append("<li> <a href=\""+script.scriptsource+"\">"+name+" on Scriptsource</a></li>")
+      $("#more-info").append("<li> <a href=\"http://scriptsource.org/scr/"+script.scriptsource+"\">"+name+" on Scriptsource</a></li>")
     $("#codepoints").empty()
     for c in script.codepoints
       console.log(c)
@@ -34,8 +41,14 @@ ScriptCooker =
         cpid = "0" + cpid
       td = $("<td>").html("U+" + cpid)
       row.append(td)
-      td = $("<td>").html(String.fromCharCode(c))
+      td = $("<td class=\"glyph\">").html(String.fromCharCode(c))
       row.append(td)
+      if script.other_fonts
+        counter = 1
+        for font in script.other_fonts
+          td = $("<td class=\"glyph other-"+counter+"\">").html(String.fromCharCode(c))
+          row.append(td)
+          counter = counter+1
       $("#codepoints").append(row)
     console.log(name)
 $ ScriptCooker.init
