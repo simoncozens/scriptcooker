@@ -22,6 +22,11 @@ ScriptCooker =
         $("#fonts").append(font.css)
         $("#fonts").append(".other-"+counter+" { font-family: \""+font.name+"\" }")
         counter = counter+1
+    if script.adhesion
+      $("#adhesion").html(script.adhesion)
+      $("#adhesion-wrapper").removeClass("hidden")
+    else
+      $("#adhesion-wrapper").addClass("hidden")
     if script.udhr
       $("#udhr").html(script.udhr)
       $("#udhr-wrapper").removeClass("hidden")
