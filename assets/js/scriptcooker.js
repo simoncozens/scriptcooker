@@ -13,7 +13,7 @@ ScriptCooker = {
     return ScriptCooker.generate();
   },
   'generate': function() {
-    var c, counter, cpid, font, name, possible, row, s, script, td, v, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2;
+    var c, counter, cpid, font, name, possible, row, s, script, td, th, v, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref, _ref1, _ref2, _ref3;
     possible = (function() {
       var _ref, _results;
       _ref = ScriptCooker.scripts;
@@ -57,9 +57,19 @@ ScriptCooker = {
       $("#more-info").append("<li> <a href=\"http://scriptsource.org/scr/" + script.scriptsource + "\">" + name + " on Scriptsource</a></li>");
     }
     $("#codepoints").empty();
-    _ref1 = script.codepoints;
-    for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-      c = _ref1[_j];
+    row = $("<tr><th>Codepoint</th><th>Noto</th></tr>");
+    if (script.other_fonts) {
+      _ref1 = script.other_fonts;
+      for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+        font = _ref1[_j];
+        th = $("<th>" + font.name + "</th>");
+        row.append(th);
+      }
+    }
+    $("#codepoints").append(row);
+    _ref2 = script.codepoints;
+    for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
+      c = _ref2[_k];
       console.log(c);
       row = $("<tr>");
       cpid = c.toString(16);
@@ -72,9 +82,9 @@ ScriptCooker = {
       row.append(td);
       if (script.other_fonts) {
         counter = 1;
-        _ref2 = script.other_fonts;
-        for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
-          font = _ref2[_k];
+        _ref3 = script.other_fonts;
+        for (_l = 0, _len3 = _ref3.length; _l < _len3; _l++) {
+          font = _ref3[_l];
           td = $("<td class=\"glyph other-" + counter + "\">").html(String.fromCharCode(c));
           row.append(td);
           counter = counter + 1;

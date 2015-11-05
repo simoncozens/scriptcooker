@@ -33,6 +33,12 @@ ScriptCooker =
       $("#more-info-wrapper").removeClass("hidden")
       $("#more-info").append("<li> <a href=\"http://scriptsource.org/scr/"+script.scriptsource+"\">"+name+" on Scriptsource</a></li>")
     $("#codepoints").empty()
+    row = $("<tr><th>Codepoint</th><th>Noto</th></tr>")
+    if script.other_fonts
+      for font in script.other_fonts
+        th = $("<th>"+font.name+"</th>")
+        row.append(th)
+    $("#codepoints").append(row)
     for c in script.codepoints
       console.log(c)
       row = $("<tr>")
