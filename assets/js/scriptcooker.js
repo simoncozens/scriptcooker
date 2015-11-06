@@ -29,9 +29,13 @@ ScriptCooker = {
     name = possible[Math.floor(Math.random() * possible.length)];
     script = ScriptCooker.scripts[name];
     $("#script").html(name);
-    $("#cpcount").html(script.count);
+    $("#glyphcount").html(script.glyph_count);
+    if (script.noto === "sans") {
+      script.noto_family = "Noto Sans " + name;
+      script.noto_css = "@import url(http://fonts.googleapis.com/earlyaccess/notosans" + (name.toLowerCase()) + ".css";
+    }
     if (script.noto_css) {
-      $("#fonts").html("@import url(http://fonts.googleapis.com/" + script.noto_css + ");");
+      $("#fonts").html(script.noto_css);
       $("#fonts").append("#udhr, #codepoints { font-family: \"" + script.noto_family + "\" }");
     }
     if (script.other_fonts) {
@@ -63,7 +67,7 @@ ScriptCooker = {
       $("#more-info").append("<li> <a href=\"http://scriptsource.org/scr/" + script.scriptsource + "\">" + name + " on Scriptsource</a></li>");
     }
     $("#codepoints").empty();
-    row = $("<tr><th>Codepoint</th><th>Noto</th></tr>");
+    row = $("<tr><th>Codepoint</th><th>Name</th><th>Noto</th></tr>");
     if (script.other_fonts) {
       _ref1 = script.other_fonts;
       for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
@@ -76,15 +80,17 @@ ScriptCooker = {
     _ref2 = script.codepoints;
     for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
       c = _ref2[_k];
-      console.log(c);
+      cpid = c[0].toString(16);
+      name = c[1];
       row = $("<tr>");
-      cpid = c.toString(16);
       while (cpid.length < 4) {
         cpid = "0" + cpid;
       }
       td = $("<td>").html("U+" + cpid);
       row.append(td);
-      td = $("<td class=\"glyph\">").html(String.fromCharCode(c));
+      td = $("<td>").html(name);
+      row.append(td);
+      td = $("<td class=\"glyph\">").html(String.fromCharCode(c[0]));
       row.append(td);
       if (script.other_fonts) {
         counter = 1;
