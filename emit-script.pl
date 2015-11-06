@@ -8,7 +8,11 @@ for my $n (keys %$database) {
   my @l = @{charscript($n)};
   my @cps;
   for (@l) { push @cps, $_ for $_->[0]..$_->[1] };
-  $database->{$n}{codepoints} = [ map { [$_, charinfo($_)->{name}]} @cps ];
+  if (@cps < 1000) { # Hangul is too much
+    $database->{$n}{codepoints} = [ map { [$_, charinfo($_)->{name}]} @cps ];
+  } else {
+    $database->{$n}{codepoints} = [];
+  }
   my $code;
   if ($code = $database->{$n}{udhr} and $code =~ /^\w+$/) {
     warn "Getting http://unicode.org/udhr/d/udhr_".$code.".txt\n";
