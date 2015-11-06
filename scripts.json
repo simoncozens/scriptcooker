@@ -87,5 +87,37 @@
         "noto_css": "@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);",
         "noto_family": "Noto Sans JP",
         "scriptsource": "Kana"
+    },
+    "Kannada": {
+        "level": "Pro",
+        "adhesion": "ಕನ್ನಡ ಲಿಪಿ",
+        "glyph_count": 82,
+        "noto": "sans",
+        "scriptsource": "Knda",
+        "udhr": "kan"
+    },
+    "Lao": {
+        "level": "Class",
+        "adhesion": "ກ ຈ ດ ຕ ບ ປ ຢ ອ ະ າ",
+        "glyph_count": 55,
+        "noto": "sans",
+        "scriptsource": "Laoo",
+        "udhr": "lao"
+    },
+    "Malayalam": {
+        "level": "Experienced",
+        "glyph_count": 70,
+        "noto": "sans",
+        "udhr": "mal",
+        "scriptsource": "Mlym",
+        "adhesion": "അവൻ"
+    },
+    "Oriya": {
+        "level": "Experienced",
+        "glyph_count": 62,
+        "noto": "sans",
+        "udhr": "mal",
+        "scriptsource": "Orya",
+        "adhesion": "ଅ ଇ ଖ ଗ ଘ ଙ ଚ କୌ"
     }
 }
