@@ -1,16 +1,15 @@
 {
     "Armenian": {
         "level": "Easy",
-        "noto_css": "earlyaccess/notosansarmenian.css",
-        "noto_family": "Noto Sans Armenian",
+        "noto": "sans",
         "scriptsource": "Armn",
         "adhesion": "շնորհակալ եմ",
-        "udhr": "ՄԱՐԴՈՒ ԻՐԱՎՈՒՆՔՆԵՐԻ ՀԱՄԸՆԴՀԱՆՈՒՐ ՀՌՉԱԿԱԳԻՐ\nՄԻԱՎՈՐՎԱԾ ԱԶԳԵՐԻ ԿԱԶՄԱԿԵՐՊՈՒԹՅՈՒՆ\nՀասարակական տեղեկատվության բաժին\nՄարդու իրավունքները\nհրապարակված Միավորված ազգերի կազմակերպության Մարդու իրավունքների համընդհանուր հռչակագրում\n1948 թվականի դեկտեմբերի 10-ին Միավորված ազգերի կազմակերպության Ընդհանուր Ժողովն ընդունեց ու ազդարարեց Մարդու իրավունքների համընդհանուր հռչակագիրը, որի ամբողջական տեքստն ամփոփված է գրքույկի հաջորդ էջերում։ Պատմական նշանակություն ունեցող այս որոշումն ընդունելուց հետո Ժողովը բոլոր անդամ պետություններին կոչ արեց հրապարակել Հռչակագրի տեքստը և անել ամեն ինչ փաստաթղթի «տարածման, հրապարակման ու մեկնաբանման համար, գլխավորապես դպրոցներում և այլ ուսումնական հաստատություններում, առանց երկրների կամ տարածքների քաղաքական կարգավիճակի տարբերակման։"
+        "udhr": "hye",
+        "glyph_count": 84
     },
     "Bengali": {
         "level": "Class",
-        "noto_css": "earlyaccess/notosansbengali.css",
-        "noto_family": "Noto Sans Bengali",
+        "noto": "sans",
         "adhesion": "ফ্‌ল্যাট",
         "scriptsource": "Beng",
         "other_fonts": [
@@ -18,13 +17,13 @@
            "css": "@import url(http://fonts.googleapis.com/earlyaccess/lohitbengali.css);"
           }
         ],
-        "udhr": "মানবাধিকারের সার্বজনীন ঘোষণাপত্র\nমুখবন্ধ\nযেহেতু মানব পরিবারের সকল সদস্যের সমান ও অবিচ্ছেদ্য অধিকারসমূহ এবং সহজাত মর্যাদার স্বীকৃতি‌ই হচ্ছে বিশ্বে শান্তি, স্বাধীনতা এবং ন্যায়বিচারের ভিত্তি;"
+        "udhr": "ben",
+        "glyph_count": 68
     },
     "Devanagari": {
         "level": "Class",
         "adhesion": " पाव किमीनुफू",
-        "noto_css": "earlyaccess/notosansdevanagari.css",
-        "noto_family": "Noto Sans Devanagari",
+        "noto": "sans",
         "scriptsource": "Deva",
         "other_fonts": [
           {"name": "Lohit Devanagari",
@@ -37,22 +36,56 @@
            "css": "@import url(https://fonts.googleapis.com/css?family=Halant&subset=devanagari);"
           }
         ],
-        "udhr": "मानव अधिकारों की सार्वभौम घोषणा\n१० दिसम्बर १९४८ को यूनाइटेड नेशन्स की जनरल असेम्बली ने मानव अधिकारों की सार्वभौम घोषणा को स्वीकृत और घोषित किया । इसका पूर्ण पाठ आगे के पृष्ठों में दिया गया है । इस ऐतिहासिक कार्य के बाद ही असेम्बली ने सभी सदस्य देशों से अपील की कि वे इस घोषणा का प्रचार करें और देशों अथवा प्रदेशों की राजनैतिक स्थिति पर आधारित भेदभाव का विचार किए बिना, विशेषतः स्कूलों और अन्य शिक्षा संस्थाओं में इसके प्रचार, प्रदर्शन, पठन और व्याख्या का प्रबन्ध करें ।"
+        "udhr": "hin",
+        "glyph_count": 78
     },
     "Georgian": {
         "level": "Easy",
         "adhesion": "დამწერლობა",
-        "noto_css": "earlyaccess/notosansgeorgian.css",
-        "noto_family": "Noto Sans Georgian",
+        "noto": "sans",
         "scriptsource": "Geor",
-        "udhr": "ადამიანის უფლებათა საყოველთაო დეკლარაცია\nპრეამბულა\nვინაიდან ადამიანთა ოჯახის ყველა წევრისათვის დამახასიათებელი ღირსების და თანასწორი და განუყოფელი უფლებების აღიარება წარმოადგენს თავისუფლების, სამართლიანობის და საყოველთაო მშვიდობის საფუძველს;"
+        "udhr": "kat",
+        "glyph_count": 38
     },
     "Gurmukhi": {
         "level": "Class",
         "adhesion": " ਕਾਫ਼ੀ ਚੁਕਾ ਅੰਦਾਜ਼ਾ",
-        "noto_css": "earlyaccess/notosansgurmukhi.css",
-        "noto_family": "Noto Sans Gurmukhi",
+        "noto": "sans",
         "scriptsource": "Guru",
-        "udhr": "ਮਨੁੱਖੀ ਅਧਿਕਾਰਾਂ ਬਾਰੇ ਵਿਸ਼ਵਵਿਆਪੀ ਐਲਾਨਨਾਮਾ (10 ਦਸੰਬਰ 1948 ਦੇ ਆਮ ਇਜਲਾਸ ਦੇ ਮਤਾ ਨੰ: 217-ਏ(3) ਰਾਹੀਂ ਪ੍ਰਵਾਣ ਕੀਤਾ ਅਤੇ ਐਲਾਨਿਆ ਗਿਆ) 10 ਦਸੰਬਰ 1948 ਨੂੰ ਸੰਯੁਕਤ ਰਾਸ਼ਟਰ ਦੇ ਆਮ ਇਜਲਾਸ ਨੇ ਮਨੁੱਖੀ ਹੱਕਾਂ ਦੇ ਵਿਸ਼ਵਵਿਆਪੀ ਐਲਾਨਨਾਮੇ ਨੂੰ ਪ੍ਰਵਾਨ ਕੀਤਾ ਅਤੇ ਐਲਾਨਿਆ, ਜਿਸ ਦਾ ਪੰਜਾਬੀ ਤਰਜ਼ਮਾ ਹੇਠਲੇ ਪੰਨਿਆਂ ਵਿੱਚ ਦਰਜ ਹੈ । ਇਸ ਇਤਿਹਾਸਕ ਕਦਮ ਤੋਂ ਬਾਅਦ ਇਜਲਾਸ ਨੇ ਸਾਰੇ ਮੈਂਬਰ ਦੇਸ਼ਾਂ ਨੂੰ ਇਸ ਐਲਾਨਨਾਮੇ ਦਾ ਪ੍ਰਚਾਰ ਕਰਨ ਅਤੇ ਬਿਨਾਂ ਕਿਸੇ ਰਾਜਸੀ ਜਾਂ ਖੇਤਰੀ ਭੇਦਭਾਵ ਦੇ ਇਸ ਨੂੰ ਵੰਡਣ, ਪ੍ਰਦਰਸ਼ਿਤ ਕਰਨ, ਪੜ੍ਹੇ ਜਾਣ ਅਤੇ ਇਸ ਬਾਰੇ ਸਕੂਲਾਂ ਅਤੇ ਹੋਰਨਾਂ ਵਿਦਿਅਕ ਅਦਾਰਿਆ ਵਿੱਚ ਯੋਗ ਜਾਣਕਾਰੀ ਦੇਣ ਦਾ ਸੱਦਾ ਦਿੱਤਾ ਹੈ ।"
+        "udhr": "pan",
+        "glyph_count": 68
+    },
+    "Hangul": {
+        "level": "Pro",
+        "adhesion": "키스의 고유조건은",
+        "noto_css": "@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);",
+        "noto_family": "Noto Sans KR",
+        "scriptsource": "Hang",
+        "udhr": "kor",
+        "glyph_count": 2350
+    },
+    "Hebrew": {
+        "level": "Starter",
+        "adhesion": "שפן אכל קצת גזר בטעם חסה, ודי",
+        "udhr": "heb",
+        "glyph_count": 27,
+        "noto": "sans",
+        "scriptsource": "Hebr"
+    },
+    "Hiragana": {
+        "level": "Starter",
+        "adhesion": "あかさたな",
+        "glyph_count": 50,
+        "noto_css": "@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);",
+        "noto_family": "Noto Sans JP",
+        "scriptsource": "Hira"
+    },
+    "Katakana": {
+        "level": "Starter",
+        "adhesion": "アカサタナ",
+        "glyph_count": 50,
+        "noto_css": "@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);",
+        "noto_family": "Noto Sans JP",
+        "scriptsource": "Kana"
     }
 }
